@@ -2,6 +2,7 @@ Homework 1
 ==================
 
 A live demo of the site can be found here: http://jstougaard.github.io/homework1/  
+The site is tested on a Mac in: Chrome, Safari and Firefox
 
 Since I had some prior experience with the basics of HTML and CSS, I have used the assignment as a playground for trying out some of the new possibilities of CSS3.  
 The result might not be very effective at communicating information. This is however on purpose, since I wanted it to be an explorative experience – both in the context of exploring the collection of animated short and in exploring the potentials of pure CSS.  
