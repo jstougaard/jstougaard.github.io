@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Job Tree</title>
+
+    <style>
+		body {
+		  font: 12px sans-serif;
+		}
+		h1 {
+			margin-bottom: 0;
+		}
+		.node {
+			cursor: pointer;
+		}
+
+		.node circle {
+		  fill: #fff;
+		  stroke: steelblue;
+		  stroke-width: 3px;
+		}
+
+		.link {
+		  fill: none;
+		  stroke: #ccc;
+		  stroke-width: 2px;
+		}
+	
+    </style>
+
+  </head>
+
+  <body>
+  	<h1>Job Type Hierarchy</h1>
+  	<p>Click blue nodes to show children</p>
+<!-- load the d3.js library -->	
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="./tree.js"></script>
+<script>
+	buildTreeFromFile("data.json");
+</script>
+	
+  </body>
+</html>
