@@ -1,5 +1,5 @@
 jstougaard.github.io
 ====================
 
-Various projects
-From classes and other
+Various projects.  
+From classes and other...
