@@ -1,0 +1,62 @@
+<div class="page timeline">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <!-- Profile panel -->
+            <div class="panel panel-profile">
+                <div class="panel-heading bg-primary clearfix">
+                    <a href="" class="pull-left profile">
+                        <img alt="" src="images/profile.jpg" class="img-circle img80_80">
+                    </a>
+                    <h3>{{main.name}}</h3>
+                    <p>{{main.title}}</p>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <i class="fa fa-university"></i>
+                        MSc IT Product Development
+                    </li>
+                    <li class="list-group-item">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                        Berkeley, California
+                    </li>
+                    <li class="list-group-item">
+                        <i class="glyphicon glyphicon-home"></i>
+                        Aarhus, Denmark
+                    </li>
+                </ul>
+            </div>
+            <!-- end Profile panel -->
+
+            <div class="panel panel-default timeline-header text-center">
+                <div class="panel-body">Varius projects</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ui-timline-container">
+        <section class="ui-timeline">
+
+            <article ng-repeat="project in projects" class="tl-item wow fadeInUp" ng-class-even="'alt'">
+                <div class="tl-body">
+                    <div class="tl-entry">
+                        <div class="tl-time">{{project.time_string}}</div>
+                        <div class="tl-icon round-icon sm bg-{{typeStyles[project.type].color}}" title="{{typeStyles[project.type].label}}"><i class="fa {{typeStyles[project.type].icon}}"></i></div>
+                        <a ng-href="{{project.url}}" class="tl-content mini-box" ng-class="{'has-link': project.url}">
+                            <span class="box-icon" ng-if="project.img"><img ng-src="{{project.img}}" class="img-circle img80_80" /></span>
+                            <h4 class="tl-tile text-{{typeStyles[project.type].color}}">{{project.title}}</h4>
+                            <p ng-bind-html='project.description | newline'></p>
+                            <p><span class="badge tag" ng-repeat="tag in project.tags">{{tag}}</span></p>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- Has to be here otherwise WOW fails -->
+            <article class="tl-item alt wow"></article>
+
+        </section>
+    </div>
+
+</div>
