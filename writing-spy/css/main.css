@@ -1,0 +1,55 @@
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: Helvetica, Arial, sans-serif;
+}
+html, body{
+    height:100%;
+}
+
+h1 {
+    text-align:center;
+    margin:10px;
+}
+form.well {
+    width:50%;
+    margin:10px auto;
+    background:#f1f1f1;
+    border:1px solid #aaaaaa;
+    padding:15px;
+}
+input, textarea {
+    background:#FFF;
+    color:#666;
+    border:1px solid #ddd;
+    padding:10px;
+    font-size:1em;
+    margin:0 auto;
+}
+textarea {
+    width:100%;
+    height:300px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+input {
+    width:200px;
+    margin-left:10px;
+}
+button, input[type="submit"] {
+    display:block;
+    border:none;
+    background:#2a78aa;
+    padding:7px 0;
+    width:100%;
+    margin:10px auto;
+    cursor: pointer;
+    color:#FFF;
+    font-size:1.2em;
+}
+button:hover, input[type="submit"]:hover {
+    background: #2f87c2;
+}

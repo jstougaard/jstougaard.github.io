@@ -1,0 +1,208 @@
+@font-face {
+	font-family:'FuturaLT-Light';
+	src:url('fonts/futuraltlight.eot');
+	src:url('fonts/futuraltlight.eot?#iefix') format('embedded-opentype'),
+			url('fonts/futuraltlight.woff') format('woff'),
+			url('fonts/futuraltlight.ttf') format('truetype'),
+			url('fonts/futuraltlight.svg#futuraltlight') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family:'FuturaLT';
+	src:url('fonts/futuraltmedium.eot');
+	src:url('fonts/futuraltmedium.eot?#iefix') format('embedded-opentype'),
+		url('fonts/futuraltmedium.woff') format('woff'),
+		url('fonts/futuraltmedium.ttf') format('truetype'),
+		url('fonts/futuraltmedium.svg#futuraltmedium') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family:'FuturaLT-Heavy';
+	src:url('fonts/futuraltheavy.eot');
+	src:url('fonts/futuraltheavy.eot?#iefix') format('embedded-opentype'),
+		url('fonts/futuraltheavy.woff') format('woff'),
+		url('fonts/futuraltheavy.ttf') format('truetype'),
+		url('fonts/futuraltheavy.svg#futuraltheavy') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family:'FuturaLT-Bold';
+	src:url('fonts/futuraltbold.eot');
+	src:url('fonts/futuraltbold.eot?#iefix') format('embedded-opentype'),
+		url('fonts/futuraltbold.woff') format('woff'),
+		url('fonts/futuraltbold.ttf') format('truetype'),
+		url('fonts/futuraltbold.svg#futuraltbold') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+
+.clearfix:before, .clearfix:after, .content:before, .content:after { content: ""; display: table; }
+.clearfix:after, .content:after { clear: both; }
+.clearfix, .content { zoom: 1; }
+* {
+	outline:none;
+	border:none;
+	font-weight:normal;
+}
+html, body {
+	min-height:100%;
+	width:100%;
+	height:100%;
+	overflow:visible;
+	background-color:#eee;
+}
+body {
+	font-size:14px;
+	text-align:left;
+	line-height:1;
+	color:#000;
+	font-family:'FuturaLT', Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	margin:0 auto;
+	padding:0;
+	width:90%;
+	max-width:860px;
+}
+
+h1 {
+	font-family:'FuturaLT-Light', Arial, Helvetica, sans-serif;
+	font-size:3em;
+	margin:0;
+	padding: 1em 50px 1.2em 0;
+	line-height: 1;
+	position: relative;
+}
+h3 {
+	font-size:0.85em;
+	text-transform:uppercase;
+	font-family:'FuturaLT-Bold', Arial, Helvetica, sans-serif;
+	display:block;
+	margin:0;
+	padding:9px 0;
+	line-height:1;
+}
+p {
+	margin:0;
+	padding:0 0 1.8em 0;
+	font-family:'FuturaLT-Light', Arial, Helvetica, sans-serif;
+	font-size: 1.25em;
+	color:#000;
+	text-decoration:none;
+	text-transform: uppercase;
+}
+div.content {
+	background-color:#fff;
+	height:400px;
+}
+ul.removable, div.trash {
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+ul.removable {
+	width:70%;
+	float:left;
+	padding:5% 4%;
+	margin:0;
+	overflow-y:auto;
+	height:100%;
+	list-style: none;
+}
+.trasher li {
+	display:block;
+	height:54px;
+	width:54px;
+	background: #C7C7C7 url(images/icons/solutions-26.png) center center no-repeat;
+	border:1px so.trasher lid #747474;
+	margin:10px;
+	padding:0;
+	float:left;
+	border-radius:30px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+	cursor:pointer;
+}
+.trasher li.angel { background-image: url(images/icons/angel-26.png) !important; }
+.trasher li.angry { background-image: url(images/icons/angry-26.png) !important; }
+.trasher li.cool { background-image: url(images/icons/cool-26.png) !important; }
+.trasher li.crying { background-image: url(images/icons/crying-26.png) !important; }
+.trasher li.evil { background-image: url(images/icons/evil-26.png) !important; }
+.trasher li.happy { background-image: url(images/icons/happy-26.png) !important; }
+.trasher li.in_love { background-image: url(images/icons/in_love-26.png) !important; }
+.trasher li.kiss { background-image: url(images/icons/kiss-26.png) !important; }
+.trasher li.lol { background-image: url(images/icons/lol-26.png) !important; }
+.trasher li.private { background-image: url(images/icons/private-26.png) !important; }
+.trasher li.question { background-image: url(images/icons/question-26.png) !important; }
+.trasher li.sad { background-image: url(images/icons/sad-26.png) !important; }
+.trasher li.sleeping { background-image: url(images/icons/sleeping-26.png) !important; }
+.trasher li.surprised { background-image: url(images/icons/surprised-26.png) !important; }
+.trasher li.tongue { background-image: url(images/icons/tongue-26.png) !important; }
+.trasher li.wink { background-image: url(images/icons/wink-26.png) !important; }
+div.trash {
+	float:left;
+	width:30%;
+	margin:0 -1px 0 0;
+	padding:5% 3%;
+	border-left:1px solid #eee;
+	height:100%;
+	background: url(images/trash_empty.png) center center no-repeat;
+}
+div.trash.drop-hover {
+	background-image:url(images/trash_empty_active.png);
+}
+div.trash.full {
+	background-image:url(images/trash_full.png);
+}
+div.trash.full.drop-hover {
+	background-image:url(images/trash_full_active.png);
+}
+.trash .alert-box {
+	background:rgba(0,0,0,0.2);
+	border:1px solid #999;
+	margin-top:12px;
+	display:none;
+}
+.trash .alert-box ul {
+	list-style: none;
+	height:230px;
+	padding:0.5em;
+	margin:0;
+	overflow-y:auto;
+}
+.trash .alert-box ul li {
+	margin:5px;
+	height:44px;
+	width:44px;
+}
+button {
+	display: block;
+	float:left;
+	text-decoration: none;
+	font-weight: normal;
+	font-family: 'FuturaLT-Bold';
+	text-transform: uppercase;
+	color: #fff;
+	width:50%;
+	background-color: #333;
+	white-space: nowrap;
+	border:none;
+	font-size:1em;
+	cursor:pointer;
+	margin:0;
+	padding:1.0em;
+	-webkit-appearance: none;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+button:hover {
+	background-color: #000;
+}
+button.confirm {
+	background-color:#D13E3E;
+}
+button.confirm:hover {
+	background-color:#9f2f31;
+}

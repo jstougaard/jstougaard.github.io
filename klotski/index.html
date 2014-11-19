@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Klotski Game</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+
+        <h1>Klotski</h1>
+        <p>Use arrow keys to move blocks</p>
+        
+        <div class="frame" id="klotski_game" data-winner-x="1", data-winner-y="3" data-width="4" data-height="5">
+            <!-- *************************
+                 block indicates game pieces
+                 main indicates main piece
+                 other classes are for color, actual sizes are set through data attributes 
+                 ****************************** -->
+            <div class="block main"       data-x="1" data-y="0" data-width="2" data-height="2"></div>
+            <div class="block square"     data-x="0" data-y="4" data-width="1" data-height="1"></div>
+            <div class="block square"     data-x="1" data-y="3" data-width="1" data-height="1"></div>
+            <div class="block square"     data-x="2" data-y="3" data-width="1" data-height="1"></div>
+            <div class="block square"     data-x="3" data-y="4" data-width="1" data-height="1"></div>
+            <div class="block horizontal" data-x="1" data-y="2" data-width="2" data-height="1"></div>
+            <div class="block vertical"   data-x="0" data-y="0" data-width="1" data-height="2"></div>
+            <div class="block vertical"   data-x="3" data-y="0" data-width="1" data-height="2"></div>
+            <div class="block vertical"   data-x="0" data-y="2" data-width="1" data-height="2"></div>
+            <div class="block vertical"   data-x="3" data-y="2" data-width="1" data-height="2"></div>
+        </div>
+
+
+
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

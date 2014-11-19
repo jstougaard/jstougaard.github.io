@@ -1,0 +1,90 @@
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: Helvetica, Arial, sans-serif;
+}
+h1, p {
+    text-align:center;
+    margin:10px;
+}
+
+/* ==========================================================================
+   Game
+   ========================================================================== */
+
+.frame {
+    width: 400px;
+    height:500px;
+    margin:5px auto 50px;
+    border:10px solid #272727;
+    background:#CCC;
+    position:relative;
+}
+
+
+.frame:after 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 30px 100px 0;
+border-color: #CCC transparent;
+display: block;
+width: 0;
+z-index: 1;
+bottom: -30px;
+left: 100px;
+}
+
+.frame:before 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 39px 109px 0;
+border-color: #272727 transparent;
+display: block;
+width: 0;
+z-index: 0;
+bottom: -49px;
+left: 91px;
+}
+
+
+
+.block {
+    position:absolute;
+    z-index:10;
+    top:0;
+    left:0;
+    background:#4c7b93;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border:2px solid #375a6d;
+    cursor:pointer;
+    transition-property: top, left;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+
+}
+.block:hover {
+    opacity: 0.80;
+}
+.block.main {
+    background:#3c947c;
+    border-color:#265f50;
+}
+.block.vertical {
+    background:#224E64;
+    border-color:#1D3947;
+}
+.block.horizontal {
+    background:#384752;
+    border-color:#28343c;
+}
+.block.selected {border: 4px dashed #852222;}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Attribute access</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/main.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    </head>
+    <body>
+
+        <h1>Attribute Access Speeds</h1>
+        <div class="content clearfix">
+            <div class="container">
+                <div class="row">
+                    <label>Number of elements</label>
+                    <input name="elem_count" placeholder="#" type="text" value="100000" />
+                </div>
+                <div class="row">
+                    <label>Attributes</label>
+                    <label class="inline"><input type="checkbox" name="attrs" value="id" checked /> ID</label>
+                    <label class="inline"><input type="checkbox" name="attrs" value="class" checked /> Class</label>
+                    <label class="inline"><input type="checkbox" name="attrs" value="style" /> Style</label>
+                    <label class="inline"><input type="checkbox" name="attrs" value="title" checked /> Title</label>
+                    <label class="inline"><input type="checkbox" name="attrs" value="data-test" checked /> Data-*</label>
+                    <label class="inline"><input type="checkbox" name="attrs" value="tabindex" checked /> Tabindex</label>
+                </div>
+                <button id="run_test">RUN</button>
+            </div>
+            <div class="details">
+                <h3>DOM access</h3><p id="time_dom"></p>
+                <h3>Property</h3><p id="time_property"></p>
+                <h3>If propertyExists access</h3><p id="time_choose"></p>
+            </div>
+            <div id="overlay" class="overlay loading"></div>
+
+        </div>
+
+        <div id="source_container"></div>
+        <script src="./js/main.js"></script>
+
+    </body>
+</html>
