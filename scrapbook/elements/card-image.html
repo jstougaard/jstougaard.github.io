@@ -1,0 +1,31 @@
+<link href="../components/polymer/polymer.html" rel="import">
+<link href="./card-caption-base.html" rel="import">
+
+<polymer-element name="card-image" attributes="label description src captionPosition location author timestring" noscript>
+  <template>
+    <style>
+    :host {
+      display: block;
+      position: relative;
+      margin:0 auto;
+    }
+
+    img {
+      max-height:100%;
+      max-width: 100%;
+      display: block;
+    }
+
+    </style>
+
+    <!-- Figure out way to extend instead -->
+    <card-caption-base label="{{label}}" description="{{description}}" captionPosition="{{captionPosition}}" location="{{location}}" author="{{author}}" timestring="{{timestring}}">
+      <!-- Wrap in <a> until proper lightbox can be implemented -->
+      <a href="{{src}}" target="_blank" title="View large image">
+        <img src="{{src}}"/>
+      </a>
+    </card-caption-base>
+  
+  </template>
+
+</polymer-element>

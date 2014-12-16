@@ -1,0 +1,51 @@
+<link href="../components/polymer/polymer.html" rel="import">
+<link href="./fancy-header.html" rel="import">
+
+<polymer-element name="card-container" attributes="label src blur orientation">
+  <template>
+    <style>
+    :host {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      padding:8px 0;
+    }
+    .content {
+      padding:0 16px;
+    }
+    .background {
+      background-size: cover;
+      background-position: center center;
+      position: absolute;
+      top:0;
+      bottom:0;
+      left:0;
+      right:0;
+      z-index: -1;
+      display: block;
+      content:'';
+    }
+    .background.blur {
+      -webkit-filter: blur(5px) brightness(1.2);
+      filter: blur(5px) brightness(1.2);
+      top:-1em;
+      bottom:-1em;
+      left:-1em;
+      right:-1em;
+    }
+    
+    </style>
+
+    <template if="{{label}}">
+      <fancy-header>{{label}}</fancy-header>
+    </template>
+    <div class="content" layout start horizontal?="{{orientation=='horizontal'}}" vertical?="{{orientation!='horizontal'}}">
+      <content></content>
+    </div>
+    <template if="{{src}}">
+      <div class="background {{ {blur: blur} | tokenList}}" style="background-image:url({{src}})"></div>
+    </template>
+  </template>
+
+  <script>Polymer({});</script>
+</polymer-element>

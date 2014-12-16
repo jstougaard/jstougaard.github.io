@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+  <title>Thanksgiving in LA</title>
+  <link rel="stylesheet" href="../../styles/colors.css">
+  
+  <script src="../../components/webcomponentsjs/webcomponents.js"></script>
+
+  <link href="../../components/core-animated-pages/core-animated-pages.html" rel="import">
+  <link href="../../elements/page-hero.html" rel="import">
+  <link href="../../elements/image-card.html" rel="import">
+  <link href="../../elements/card-image.html" rel="import">
+  <link href="../../elements/card-text.html" rel="import">
+  <link href="../../elements/card-container.html" rel="import">
+  <link href="../../elements/fancy-header.html" rel="import">
+  <link href="../../elements/card-slider.html" rel="import">
+  <link href="../../elements/card-map.html" rel="import">
+<link rel="import" href="../../components/polymer-simple-slider/src/simple-slider.html">
+
+  
+
+  <style>
+    body {
+      font-family: 'Roboto 2', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      margin: 0;
+    }
+
+    card-slider img {
+    	max-width:100%;
+    }
+    card-map.hero {
+    	width: 60%;
+		margin: -150px auto 16px;
+		border-width:4px;
+		border-radius: 0;
+		height: 300px;
+    }
+    .info {
+    	margin: 8px;
+		padding: 8px;
+		font-size: 1.2em;
+    }
+
+  </style>
+</head>
+<body unresolved>
+
+  	<page-hero label="Summer in November" src="./images/pools/nahreen.jpg"></page-hero>
+	<card-map class="hero" latitude="34.126615" longitude="-118.385149"></card-map>
+  	
+  	<card-container orientation="vertical" label="Welcome to LA">
+		<card-image src="./images/views/018_IMG.jpg" author="Sven Schwermer" timestring="Nov 26th 2014" style="width:80%"></card-image>
+		<div layout horizontal center>
+			<card-image flex three src="./images/views/observatory.jpg" author="Jeppe Stougaard" timestring="Nov 26th 2014" label="The Griffith Observatory" location="Los Angeles"></card-image>
+			<card-text flex>
+				<p>After we arrived and had settled down, we drove up to the Griffith Observatory to have a look at the view of the city and the sign.</p>
+				<p>The weather was beautiful - blue sky and around 30 degrees - not bad for the end of November</p>
+			</card-text>
+		</div>
+		<div layout horizontal>
+			<card-slider flex transition-property="top" label="Views from the observatory" location="Los Angeles">
+				<img src="./images/views/029_IMG.jpg">
+				<img src="./images/views/002_IMG.jpg">
+				<img src="./images/views/028_IMG.jpg">
+			</card-slider>
+			<card-image flex src="./images/views/004_IMG.jpg" author="Sven Schwermer" timestring="Nov 26th 2014" label="Looking over LA" description="Notice the sign in the background - not so big in reality" Location="Los Angeles"></card-image>
+		</div>
+		
+  	</card-container>
+  	<fancy-header class="amber white">LA Life</fancy-header>
+  	<card-container orientation="vertical" class="amber-light">
+  		<div layout horizontal center>
+			<card-image flex three src="./images/pools/nahreen.jpg" author="Jeppe Stougaard" timestring="Nov 28th 2014" label="Visiting Nahreens parents" location="Orange County"></card-image>
+  			<card-text flex>Another day,<br/>Another pool</card-text>
+  		</div>
+  		<div layout horizontal>
+			<card-image src="./images/pools/house.jpg" author="Jeppe Stougaard" timestring="Nov 27th 2014" label="Everything's better here..." location="Studio City, LA"></card-image>
+			<card-image src="./images/pools/house2.jpg" author="Jeppe Stougaard" timestring="Nov 27th 2014" label="...with a beer" location="Studio City, LA"></card-image>
+  		</div>
+  		<div layout horizontal>
+			<card-image src="./images/pools/IMG_000.jpg" author="Severin" label="Hanging out at the pool" timestring="Nov 26th 2014"></card-image>
+			<card-image src="./images/pools/IMG_013.jpg" author="Severin" label="Hanging out at another pool" timestring="Nov 28th 2014"></card-image>
+  		</div>
+  	</card-container>
+
+  	<card-container orientation="horizontal" label="Wonderful people">
+  		<div layout vertical flex>
+			<card-image src="./images/people/025_IMG.jpg" author="Sven Schwermer" timestring="Nov 27th 2014"></card-image>
+			<card-image src="./images/people/IMG_003.jpg" author="Lachie" timestring="Nov 29th 2014"></card-image>
+  		</div>
+  		<div layout vertical flex>
+			<card-image src="./images/people/IMG_008.jpg" author="Lachie" timestring="Nov 28th 2014"></card-image>
+			<card-image src="./images/people/032_IMG.jpg" author="Sven Schwermer" timestring="Nov 27th 2014"></card-image>
+  		</div>
+  	</card-container>
+
+  	<card-container orientation="vertical" label="Sunset at Venice Beach" class="dark white">
+  		<card-slider transition-property="opacity" start-value="0" visible-value="1" end-value="1" label="Don't let the sun go down" description="We almost caught the sunset at Venice Beach after our visit at Nahreen's. Only a few minutes too late to actually see the sun" location="Venice Beach, LA">
+			<img src="./images/atmosphere/sunset1.jpg">
+			<img src="./images/atmosphere/IMG_007.jpg">
+			<img src="./images/atmosphere/sunset2.jpg">
+			<img src="./images/atmosphere/IMG_006.jpg">
+		</card-slider>
+  	</card-container>
+
+
+  	<card-container>
+  		<div layout horizontal center>
+			<card-text>Oh, almost forgot about the Thanksgiving dinner</card-text>
+			<card-image src="./images/dinner.jpg" author="Lachie" label="Thank you Saachi and Ingvild!" location="Palmdale" timestring="Nov 27th 2014"></card-image>
+		</div>
+  	</card-container>
+
+	<fancy-header>The End</fancy-header>
+
+</body>
+</html>

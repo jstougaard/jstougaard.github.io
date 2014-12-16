@@ -1,0 +1,57 @@
+<link rel="import" href="../components/core-item/core-item.html">
+<link rel="import" href="../components/paper-ripple/paper-ripple.html">
+
+<polymer-element name="menu-item" attributes="label timestring img" horizontal center layout>
+<template>
+  <style type="text/css">
+    :host {
+      display: block;
+      position: relative;
+      min-height: 50px;
+      white-space: nowrap;
+      color:#444;
+      cursor: pointer;
+    }
+
+    :host(.font-scalable) {
+      min-height: 2.5em;
+    }
+
+    :host(.core-selected) {
+      background-color: #dedede;
+      color:#000;
+    }
+
+    .menu-item .img-container {
+      width: 50px;
+      height:50px;
+      border-radius: 50%;
+      margin: 10px;
+      background:transparent center center no-repeat;
+      background-size: cover;
+    }
+
+    .menu-item .title {
+      font-size: 1.125em;
+    }
+
+    .menu-item .subtitle {
+      font-size: 0.75em;
+    }
+  </style>
+
+  <core-item class="menu-item">
+    <div class="img-container" style="background-image:url({{img}})"></div>
+    <div flex>
+      <div class="title">{{label}}</div>
+      <div class="subtitle">{{timestring}}</div>
+    </div>
+  </core-item>
+  <paper-ripple fit></paper-ripple>
+</template>
+<script>
+
+  Polymer({});
+
+</script>
+</polymer-element>

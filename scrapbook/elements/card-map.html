@@ -1,0 +1,38 @@
+<link href="../components/polymer/polymer.html" rel="import">
+<link href="../components/google-map/google-map.html" rel="import">
+<link href="../components/google-map/google-map-search.html" rel="import">
+
+<polymer-element name="card-map" extends="google-map" attributes="latitude longitude">
+  <template>
+    <style>
+    :host {
+      display: block;
+      position: relative;
+      height:400px;
+
+      border:8px solid white;
+      margin:8px;
+      border-radius: 3px;
+      background:#FFF;
+      box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+      box-sizing:border-box;
+    }
+    </style>
+
+      <!-- <google-map latitude="{{latitude}}" longitude="{{longitude}}" fitToMarkers disableDefaultUI zoomable>
+        <template if="{{latitude && longitude}}">
+          <google-map-marker latitude="{{latitude}}" longitude="{{longitude}}"></google-map-marker>
+        </template>
+      </google-map> -->
+      <shadow></shadow>
+  </template>
+
+  <script>
+    Polymer({
+      fitToMarkers:true,
+      disableDefaultUI:true,
+      zoomable:false,
+      showCenterMarker:true
+    });
+  </script>
+</polymer-element>

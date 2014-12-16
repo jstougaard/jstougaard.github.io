@@ -1,0 +1,81 @@
+<!--
+    @license
+    Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+    The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+    Code distributed by Google as part of the polymer project is also
+    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<!doctype html>
+<html>
+<head>
+  <title>Scrapbook</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <script src="components/webcomponentsjs/webcomponents.js"></script>
+  
+  <link rel="import" href="components/core-icons/core-icons.html">
+  <link rel="import" href="components/sampler-scaffold/sampler-scaffold.html">
+  <link rel="import" href="components/core-item/core-item.html">
+  <link rel="import" href="elements/menu-item.html">
+
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial;
+      margin: 0;
+    }
+    
+    section {
+      padding: 40px;
+      min-height: 300px;
+    }
+
+    sampler-scaffold /deep/ #card .element-label {
+      color:#2196F3;
+    }
+
+    sampler-scaffold::shadow core-toolbar {
+      background:#424242;
+    }
+    sampler-scaffold::shadow .sourceButton {
+      display: none;
+    }
+
+    .about {
+      margin-top:1em;
+      padding:10px 20px;
+      border-top:1px solid #dedede;
+    }
+    .about h2 {
+      text-transform: uppercase;
+      margin:0;
+      font-size:1em;
+    }
+    .about p {
+      margin:0.4em 0;
+    }
+  </style>
+
+</head>
+
+<body unresolved>
+
+  <sampler-scaffold label="PICK A STORY:">
+    <menu-item label="Life in Berkeley" url="stories/berkeley/" img="stories/berkeley/images/icon.jpg" tag="berkeley" timestring="August - December 2014"></menu-item>
+    <menu-item label="Thankgiving in LA" url="stories/la/" img="stories/la/images/icon.jpg" tag="los-angeles" timestring="26th - 30th November 2014"></menu-item>
+    <menu-item label="Las Vegas &amp; Grand Canyon" url="stories/vegas/" img="stories/vegas/images/icon.jpg" tag="vegas" timestring="7th - 12th November 2014"></menu-item>
+
+    <div class="about">
+      <h2>About</h2>
+      <p>Travel blog concept by Jeppe Stougaard.</p>
+      <p>Containing small stories from my semester in Berkeley.</p>
+      <p>Built with <a href="http://www.polymer-project.org" target="_blank">Polymer</a></p>
+    </div>
+  </sampler-scaffold>
+
+</body>
+</html>

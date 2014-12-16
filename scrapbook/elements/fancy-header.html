@@ -1,0 +1,60 @@
+<link href="../components/polymer/polymer.html" rel="import">
+
+<polymer-element name="fancy-header" attributes="">
+  <template>
+    <style>
+    :host {
+      display: block;
+      position: relative;
+      padding:0.67em 24px;
+    }
+
+    h1 {
+      text-align: center;
+      font-weight: 300;
+      font-family: 'Cinzel Decorative', cursive;
+      margin:0;
+      overflow: hidden;
+      text-align: center;
+    }
+    h1 span {
+      position: relative;  
+    }
+    h1 span:before,
+    h1 span:after {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      content: "";
+      position: absolute;
+      border-bottom: 1px solid black;
+      border-top: 1px solid black;
+      width: 600px;
+      height: 7px;
+      top: 50%;
+      margin-top: -3px;
+    }
+    h1 span:before {
+      right: 100%;
+      margin-right: 15px;
+    }
+    h1 span:after {
+      left: 100%;
+      margin-left: 15px;
+    }
+
+    :host(.white) h1 span:before,
+    :host(.white) h1 span:after,
+    :host-context(.white) h1 span:before,
+    :host-context(.white) h1 span:after {
+      border-color:white;
+    }
+
+    </style>
+
+    <h1><span><content></content></span></h1>
+  
+  </template>
+
+  <script>Polymer({});</script>
+</polymer-element>

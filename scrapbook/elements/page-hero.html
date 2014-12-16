@@ -1,0 +1,70 @@
+<link rel="import" href="../components/polymer/polymer.html">
+<link rel="import" href="../components/core-icon-button/core-icon-button.html">
+
+<polymer-element name="page-hero" attributes="label src blur">
+  <template>
+    <style>
+    :host {
+      display: block;
+      position: relative;
+      padding: 20px;
+      width: 100%;
+      height: 350px;
+      overflow: hidden;
+      z-index:0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 5rem;
+      font-weight: 300;
+      color:white;
+      text-shadow: -1px -1px rgba(0, 0, 0, 0.5);
+      max-width:700px;
+    }
+    .background {
+      background-size: cover;
+      background-position: center center;
+      position: absolute;
+      top:0;
+      bottom:0;
+      left:0;
+      right:0;
+      z-index: -1;
+      display: block;
+      content:'';
+      background-color: #2196F3;
+    }
+    .background.blur {
+      -webkit-filter: blur(5px) brightness(1.2);
+      filter: blur(5px) brightness(1.2);
+      top:-1em;
+      bottom:-1em;
+      left:-1em;
+      right:-1em;
+    }
+
+    :host(.sepia) .background {
+      -webkit-filter: sepia(1) brightness(0.9);
+      filter: sepia(1) brightness(0.9);
+    }
+
+    :host(.sepia) .background.blur {
+      -webkit-filter: blur(5px) sepia(1) brightness(0.9);
+      filter: blur(5px) sepia(1) brightness(0.9);
+    }
+    
+    </style>
+
+      <template if="{{label}}">
+        <h1>{{label}}</h1>
+      </template>
+      <div class="background {{ {blur: blur} | tokenList}}" style="background-image:url({{src}})"></div>
+  
+  </template>
+  <script>
+  Polymer({
+    blur: true
+  });
+  </script>
+</polymer-element>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+  <title>Thanksgiving in LA</title>
+  <link rel="stylesheet" href="../../styles/colors.css">
+  
+  <script src="../../components/webcomponentsjs/webcomponents.js"></script>
+
+  <link href="../../components/core-animated-pages/core-animated-pages.html" rel="import">
+  <link href="../../elements/page-hero.html" rel="import">
+  <link href="../../elements/image-card.html" rel="import">
+  <link href="../../elements/card-image.html" rel="import">
+  <link href="../../elements/card-text.html" rel="import">
+  <link href="../../elements/card-container.html" rel="import">
+  <link href="../../elements/fancy-header.html" rel="import">
+  <link href="../../elements/card-slider.html" rel="import">
+  <link href="../../elements/card-map.html" rel="import">
+<link rel="import" href="../../components/polymer-simple-slider/src/simple-slider.html">
+
+  
+
+  <style>
+    body {
+      font-family: 'Roboto 2', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      margin: 0;
+    }
+
+    card-slider img {
+    	max-width:100%;
+    }
+    card-map.hero {
+    	width: 60%;
+		margin: -150px auto 16px;
+		border-width:4px;
+		border-radius: 0;
+		height: 300px;
+    }
+    .info {
+    	margin: 8px;
+		padding: 8px;
+		font-size: 1.2em;
+    }
+
+  </style>
+</head>
+<body unresolved>
+
+  <page-hero label="Californication and a bit of studying" blur="false" class="sepia" src="./images/views/VIEWS_003.jpg"></page-hero>
+	<card-map class="hero" latitude="37.871357" longitude="-122.258515"></card-map>
+  
+  <card-container>
+    <card-image src="./images/places/PLACES_002.jpg" author="Jeppe Stougaard"></card-image>
+  </card-container>
+  <fancy-header>Beautiful Campus</fancy-header>
+  <card-container>
+    <div layout horizontal>
+      <card-image src="./images/places/PLACES_005.jpg" label="Living at the International House" author="Jeppe Stougaard" location="Berkeley"></card-image>
+      <card-image src="./images/places/PLACES_003.jpg" label="Studying at the School of Information" author="Jeppe Stougaard" location="Berkeley"></card-image>
+    </div>
+    <div layout horizontal>
+      <card-image flex three src="./images/places/PLACES_000.jpg" label="A swing with a view" author="Jeppe Stougaard"></card-image>
+      <card-image flex src="./images/places/PLACES_004.jpg" label="The characteristic Campenile" author="Jeppe Stougaard"></card-image>
+    </div>
+    <div layout horizontal>
+      <card-image flex src="./images/places/PLACES_006.jpg" label="View over Berkeley from The Big C" author="Jeppe Stougaard"></card-image>
+      <card-image flex three src="./images/places/PLACES_001.jpg" label="Cal Bears practising"  location="Memorial Stadium" author="Jeppe Stougaard"></card-image>
+    </div>
+  </card-container>
+
+  <card-container label="Close to San Francisco">
+    <div layout horizontal center>
+      <card-slider flex three label="Sightseeing in San Francisco" location="San Francisco">
+        <img src="./images/san_francisco/SF_001.jpg"/>
+        <img src="./images/san_francisco/SF_002.jpg"/>
+        <img src="./images/san_francisco/SF_000.jpg"/>
+        <img src="./images/san_francisco/SF_003.jpg"/>
+        <img src="./images/san_francisco/SF_005.jpg"/>
+        <img src="./images/san_francisco/SF_006.jpg"/>
+        <img src="./images/san_francisco/SF_007.jpg"/>
+      </card-slider>
+      <card-text flex>San Francisco is right across the bay so it is a perfect place to go for a day trip.<br/>There is plenty to see here: take a biking trip over the bridge, explore the streets or visit Fisherman's Wharf</card-text>
+    </div>
+  </card-container>
+
+  <card-container label="Plenty of fun">
+    <div layout horizontal>
+      <card-image flex src="./images/events/EVENTS_000.jpg" label="Visit Silicon Valley" location="Google Headquarters" author="Jeppe Stougaard"></card-image>
+      <card-image flex src="./images/events/EVENTS_001.jpg" label="Go to the pool" location="Strawberry Canyon Pool" author="Jeppe Stougaard"></card-image>
+    </div>
+    <div layout horizontal>
+      <card-image flex three src="./images/events/EVENTS_002.jpg" label="Find a party" description="Halloween for instance" location="Pappy's, Berkeley" author="Jeppe Stougaard"></card-image>
+      <card-image flex src="./images/events/groceries.jpg" label="Go grocery shopping" author="Jeppe Stougaard"></card-image>
+    </div>
+    <div layout horizontal>
+      <card-image flex src="./images/events/EVENTS_003.jpg" label="Hate on Stanford" description="This is the bonfire before the Big Game against Stanford" location="Greek Theatre" author="Jeppe Stougaard"></card-image>
+      <card-image flex src="./images/events/EVENTS_004.jpg" label="Pregame at the frats!" description="Or feel too old and stand on the side and stare in awe" author="Jeppe Stougaard"></card-image>
+    </div>
+    <card-slider start-value="0" visible-value="1" end-value="1"  label="Pretend to be interested in football" location="Memorial Stadium">
+      <img src="./images/events/EVENTS_005.jpg"/>
+      <img src="./images/events/EVENTS_006.jpg"/>
+      <img src="./images/events/EVENTS_007.jpg"/>
+    </card-slider>
+      
+  </card-container>
+  <card-text style="width:60%;margin:8px auto;">
+    <p>Of course Berkeley is also convienently placed in the middle of California - the land of fun things to do.</p>
+    <p>This means, you can spend a lot of weekends going on trips to other places</p>
+    <p>But let's leave that to another story</p>
+  </card-text>
+	<fancy-header>The End</fancy-header>
+
+</body>
+</html>

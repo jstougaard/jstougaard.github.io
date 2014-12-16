@@ -1,0 +1,41 @@
+<link href="../components/polymer/polymer.html" rel="import">
+<link href="../components/core-icons/core-icons.html" rel="import">
+<link href="../components/paper-fab/paper-fab.html" rel="import">
+
+<polymer-element name="card-text" attributes="label src" noscript>
+  <template>
+    <style>
+    :host {
+      display: block;
+      position: relative;
+      padding-top:28px;
+      margin:8px;
+      color: #212121;
+    }
+    paper-fab {
+      position: absolute;
+      top:0;
+      left:50%;
+      margin-left: -28px;
+      width:56px;
+      height:56px;
+    }
+    .card {
+      padding:28px;
+      padding-top:36px;
+      border-radius: 3px;
+      background:#FFF;
+      box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+      font-size:1.2em;
+      text-align: center;
+    }
+    </style>
+
+    <paper-fab src="./img/quote_icon.svg" raised="false"></paper-fab>
+    <div class="card">
+      <content></content>
+    </div>
+  
+  </template>
+
+</polymer-element>

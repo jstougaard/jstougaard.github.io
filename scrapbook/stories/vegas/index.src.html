@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+  <title>Las Vegas and Grand Canyon</title>
+  <link rel="stylesheet" href="../../styles/colors.css">
+  
+  <script src="../../components/webcomponentsjs/webcomponents.js"></script>
+
+  <link href="../../components/core-animated-pages/core-animated-pages.html" rel="import">
+  <link href="../../elements/page-hero.html" rel="import">
+  <link href="../../elements/image-card.html" rel="import">
+  <link href="../../elements/card-image.html" rel="import">
+  <link href="../../elements/card-text.html" rel="import">
+  <link href="../../elements/card-container.html" rel="import">
+  <link href="../../elements/fancy-header.html" rel="import">
+  <link href="../../elements/card-slider.html" rel="import">
+  <link href="../../elements/card-map.html" rel="import">
+<link rel="import" href="../../components/polymer-simple-slider/src/simple-slider.html">
+
+  
+
+  <style>
+    body {
+      font-family: 'Roboto 2', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      margin: 0;
+    }
+
+    card-slider img {
+    	max-width:100%;
+    }
+    card-map.hero {
+    	width: 60%;
+		margin: -150px auto 16px;
+		border-width:4px;
+		border-radius: 0;
+		height: 300px;
+    }
+    .info {
+    	margin: 8px;
+		padding: 8px;
+		font-size: 1.2em;
+    }
+
+  </style>
+</head>
+<body unresolved>
+
+  	<page-hero label="Neon lights and vast landscapes" src="./images/hotels/newyork.jpg"></page-hero>
+	<card-map class="hero" latitude="36.100819" longitude="-115.172982"></card-map>
+  	<card-container orientation="vertical" label="The Strip">
+		<div layout horizontal>
+			<card-image src="./images/hotels/paris.jpg" author="Jeppe Stougaard" timestring="Nov 7th 2014" style="width:70%"></card-image>
+			<div class="info fontscalable" layout vertical center-justified flex>
+				<p>Las Vegas is known for it's extravagant hotels and casinos, all lined up right next to each other on the strip.</p>
+				<p>Here New York, Paris and Egypt are all within walking distance of eachother</p>
+			</div>
+		</div>
+		<div layout horizontal>
+			<div layout vertical flex two>
+				<card-image src="./images/hotels/mgm_grand.jpg"  author="Lachlan" timestring="Nov 7th 2014" label="MGM Grand" description="We stayed at the MGM Grand for the first 3 nights. 6 people in a room meant for 2."></card-image>
+				<card-image src="./images/hotels/luxor.jpg" author="Jeppe Stougaard" timestring="Nov 10th 2014" label="Luxor" description="For the last night we moved to Hotel Luxor - the pyramid"></card-image>
+
+			</div>
+			<div layout vertical flex three>
+				<card-image src="./images/hotels/newyork.jpg" author="Jeppe Stougaard" timestring="Nov 7th 2014" label="New York, New York" description="From our hotel room we had a nice view over the 'New York Skyline'"></card-image>
+				<card-image src="./images/hotels/excalibur.jpg" author="Jeppe Stougaard" timestring="Nov 7th 2014"></card-image>
+			</div>
+		</div>
+	</card-container>
+
+	<card-container orientation="vertical" class="dark" style="padding:1em 0;">
+		<card-image src="./images/attractions/hardwell.jpg" author="Jeppe Stougaard" timestring="Nov 9th 2014" label="Hardwell @ Hakkassan" location="Hakkassan, Las Vegas" style="width:80%"></card-image>
+		
+	</card-container>
+	<fancy-header class="blue-grey white">Big City Life</fancy-header>
+
+	<card-container orientation="horizontal">
+		<div layout vertical flex three>
+			<card-image src="./images/attractions/pool_party.jpg" author="Lachlan" timestring="Nov 7th 2014" label="Just a regular Vegas nightclub" location="Marquee Nightclub, Las Vegas"></card-image>
+			<card-text>Every hotel has it's own attractions to lure in the turists</card-text>
+			<card-image src="./images/attractions/dolphin.jpg" timestring="Nov 10th 2014" label="Hugging the dolphins!" description="The Mirage has a small zoo with several doplhins, white lions, white tigers and leopards. And lion cubs! All the animals did look slightly sad though." location="The Mirage, Las Vegas"></card-image>
+		</div>
+		<div layout vertical flex two>
+			<card-slider transition-property="opacity" start-value="0" visible-value="1" end-value="1">
+				<img src="./images/attractions/fish1.jpg" />
+				<img src="./images/attractions/fish2.jpg" />
+			</card-slider>
+			<card-image src="./images/attractions/vulcano.jpg" label="Volcano at the Mirage" timestring="Nov 8th 2014" captionPosition="right"></card-image>
+			
+		</div>
+		
+	</card-container>
+	
+	<page-hero label="Grand Canyon" src="./images/grand_canyon/img9.jpg"></page-hero>
+	<div class="dark">
+		<card-map class="hero" latitude="36.106965" longitude="-112.112997"></card-map>
+		<card-container orientation="horizontal">
+			<card-image src="./images/grand_canyon/img2.jpg" flex author="Jeppe Stougaard" timestring="Nov 9th 2014" label="Beautiful landscapes and perfect weather" location ="Grand Canyon"></card-image>
+			<div layout vertical flex>
+				<card-text>We took a day-trip from Vegas to see the Grand Canyon.<br/>It's was around 5 hours of driving each way and it included getting up at 7am after a late Vegas night, but it was worth it</card-text>
+				<card-image src="./images/grand_canyon/img9.jpg" author="Jeppe Stougaard" timestring="Nov 9th 2014" captionPosition="top" ></card-image>
+			</div>
+		</card-container>
+		<card-container>
+			<card-slider flex two transition-property="opacity" start-value="0" visible-value="1" end-value="1">
+				<img src="./images/grand_canyon/img3.jpg" />
+				<img src="./images/grand_canyon/img10.jpg" />
+				<img src="./images/grand_canyon/img4.jpg" />
+				<img src="./images/grand_canyon/img5.jpg" />
+				<img src="./images/grand_canyon/img12.jpg" />
+				<img src="./images/grand_canyon/img7.jpg" />
+			</card-slider>
+		</card-container>
+		<card-container orientation="horizontal">
+			<div layout vertical flex three>
+				<card-image src="./images/grand_canyon/img6.jpg" author="Jeppe Stougaard" timestring="Nov 9th 2014"  captionPosition="right" label="Loes found a moose!" location="Desert View"></card-image>
+				<card-image src="./images/grand_canyon/img1.jpg" author="Maarten" timestring="Nov 9th 2014"></card-image>
+			</div>
+			<card-image src="./images/grand_canyon/img11.jpg" flex two author="Jeppe Stougaard" timestring="Nov 9th 2014" ></card-image>
+		</card-container>
+	</div>
+	<fancy-header>The End</fancy-header>
+
+</body>
+</html>

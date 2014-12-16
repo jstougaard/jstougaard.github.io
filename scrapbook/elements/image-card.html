@@ -1,0 +1,108 @@
+<link href="../components/polymer/polymer.html" rel="import">
+<link href="../components/core-item/core-item.html" rel="import">
+
+<polymer-element name="image-card" attributes="label src captionPosition location author timestring">
+  <template>
+    <style>
+    :host {
+      display: block;
+      position: relative;
+      color:#000;
+    }
+    core-item[reverse] {
+      text-align: right;
+    }
+    core-item[reverse]::shadow #icon {
+      margin: 0 0.25em 0 0.75em;
+    }
+
+    .card {
+      padding:8px;
+      margin:8px;
+      border-radius: 3px;
+      background:#FFF;
+      box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+    }
+    .card .img-container, .card img {
+      max-height:100%;
+      max-width: 100%;
+    }
+    .card .img-container {
+      position: relative;
+      overflow: hidden;
+    }
+    .card .img-container .details {
+      position: absolute;
+      bottom:-40px;
+      left:0;
+      right:0;
+      height:40px;
+      color:white;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+      font-size: 12px;
+      padding:0 0.25em;
+      transition:bottom 0.5s ease-out;
+    }
+    .card .img-container:hover .details {
+      bottom:0;
+    }
+    .card .details core-item::shadow #icon {
+
+    }
+    
+    .card .caption {
+      padding:0 8px;
+    }
+    .card .description {
+      margin-top: 10px;
+    }
+    .card .description h3 {
+      font-size: 1em;
+      margin:0;
+      color:#212121;
+    }
+
+    .card .description p {
+      margin: 4px 0;
+      font-size:14px;
+    }
+    .card[horizontal] .caption {
+      min-width:25%;
+    }
+    </style>
+
+
+    <div class="card" layout horizontal?={{captionPosition=='right'||captionPosition=='left'}} vertical?={{captionPosition=='top'||captionPosition=='bottom'}} reverse?={{captionPosition=='top'||captionPosition=='left'}}>
+      <div class="img-container">
+        <img src="{{src}}" />
+        <template if="{{author || timestring}}">
+          <div layout horizontal justified class="details">
+            <core-item icon="account-circle" label="Photographer: {{author}}" class="font-scalable small" ></core-item>
+            <core-item icon="schedule" label="{{timestring}}" horizontal layout reverse class="font-scalable small right" ></core-item>
+          </div>
+        </template>
+      </div>
+      <div layout vertical?={{captionPosition=='right'||captionPosition=='left'}} horizontal?={{captionPosition=='top'||captionPosition=='bottom'}} start class="caption">
+        <template if="{{label}}">
+          <div flex class="description">
+            <h3>{{label}}</h3>
+            <p><content></content></p>
+          </div>
+        </template>
+        <template if="{{location}}">
+          <core-item icon="room" label="{{location}}" horizontal layout class="font-scalable small" ></core-item>
+        </template>
+      </div>
+    </div>
+  
+  </template>
+
+  <script>Polymer({
+    publish: {
+      'captionPosition': {
+        value: "bottom",
+        reflect: false
+      }
+    }
+  });</script>
+</polymer-element>
