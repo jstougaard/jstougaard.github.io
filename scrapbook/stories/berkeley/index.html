@@ -906,13 +906,6 @@ Fired when the search element returns a result.
 
 
 
-
-<script src="../../components/SimpleSlider/dist/simpleslider.min.js"></script>
-
-
-
-  
-
   <style>
     body {
       font-family: 'Roboto 2', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -4834,18 +4827,38 @@ polyfill-next-selector { content: ':host > a'; }
       container.style.height = height + "px";
     }
 
-    options.ready = function () {
-        // Extend to update on resize     
-        setDimension(this.$.img_container, this.children, true);
+    var allIsLoaded = function(images, callback) {
+      var self = this,
+          listCount = images.length,
+          onLoaded = function() {
+            listCount--;
+            if (listCount === 0) { callback.call(self); }
+          };
 
-        element = new window.SimpleSlider(this, {
-          transitionProperty: this['transition-property'],
-          transitionDuration: this['transition-duration'],
-          transitionDelay: this['transition-delay'],
-          startValue: this['start-value'],
-          visibleValue: this['visible-value'],
-          endValue: this['end-value'],
-          autoPlay: this['auto-play']
+      for (var i=0;i<images.length;i++) {
+        if (images[i].complete)
+          onLoaded();
+        else
+          images[i].onload = onLoaded;
+      }
+    }
+
+    options.ready = function () {
+        allIsLoaded.call(this, this.children, function() {
+          //console.log("All is loaded", this);
+
+          // Extend to update on resize     
+          setDimension(this.$.img_container, this.children, true);
+
+          element = new window.SimpleSlider(this, {
+            transitionProperty: this['transition-property'],
+            transitionDuration: this['transition-duration'],
+            transitionDelay: this['transition-delay'],
+            startValue: this['start-value'],
+            visibleValue: this['visible-value'],
+            endValue: this['end-value'],
+            autoPlay: this['auto-play']
+          });
         });
 
     };
@@ -6117,48 +6130,6 @@ Fired when the Maps API has fully loaded.
     });
   </script>
 </polymer-element>
-
-<polymer-element name="simple-slider" constructor="SimpleSliderElement" attributes="transition-property transition-duration transition-delay start-value visible-value end-value auto-play" assetpath="../../components/polymer-simple-slider/src/">
-
-  <script>
-
-    var options = {};
-    var element;
-
-    options.ready = function () {
-
-        element = new window.SimpleSlider(this, {
-          transitionProperty: this['transition-property'],
-          transitionDuration: this['transition-duration'],
-          transitionDelay: this['transition-delay'],
-          startValue: this['start-value'],
-          visibleValue: this['visible-value'],
-          endValue: this['end-value'],
-          autoPlay: this['auto-play']
-        });
-
-    };
-
-    // Dispose slider on element detach
-    options.detached = function () {
-        element.dispose();
-    };
-
-    // Define slider methods on polymer element
-    options.actualIndex = function() { return element.actualIndex; };
-    options.change = function(index) { element.change(index); };
-    options.next = function() { element.next(); };
-    options.prev = function() { element.prev(); };
-    options.prevIndex = function() { return element.prevIndex(); };
-    options.nextIndex = function() { return element.nextIndex(); };
-    options.dispose = function() { element.dispose(); };
-
-    Polymer('simple-slider', options);
-
-  </script>
-
-</polymer-element>
-
 </div>
 
   <page-hero label="Californication and a bit of studying" blur="false" class="sepia" src="images/views/VIEWS_003.jpg"></page-hero>
