@@ -422,6 +422,14 @@ html /deep/ .core-collapse-closed {
     }
   </style>
 
+  <script>
+    var is_chrome = !!window.chrome;
+    if (!is_chrome) {
+      alert("This site is experimental. Please use Google Chrome to view it.");
+      window.location = "https://www.google.com/chrome";
+    }
+  </script>
+
 </head>
 
 <body unresolved=""><div hidden=""><polymer-element name="core-meta" attributes="label type" hidden="" assetpath="components/core-meta/">
