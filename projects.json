@@ -1,7 +1,7 @@
 [
 	{
 		"time_string": "November 2014",
-		"title": "Portfolio Timeline",
+		"title": "Porfolio Timeline",
 		"description": "Overview of varius former projects. Most of them small and as part of homework assignments.\n Timeline created to gain familiarity with angular, coffeescript, grunt and bower",
 		"img": "",
 		"url": "",
@@ -21,7 +21,7 @@
 		"title": "Job Tree",
 		"time_string": "October 2014",
 		"description": "Visualization of job title categories.\nCreated as part of a information organization project",
-		"img": "images/job-tree.png",
+		"img": "timeline/images/job-tree.png",
 		"url": "http://jstougaard.github.io/job-tree/",
 		"type": "homework",
 		"tags": ["d3"]
@@ -30,7 +30,7 @@
 		"title": "USGS Earthquake Map",
 		"time_string": "October 2014",
 		"description": "Visualize all significant earthquakes within the last hour. Learning AngularJS and Leaflet",
-		"img": "images/earthquake-map.png",
+		"img": "timeline/images/earthquake-map.png",
 		"url": "http://jstougaard.github.io/earthquake-map/",
 		"type": "homework",
 		"tags": ["AngularJS", "Leaflet"]
@@ -39,7 +39,7 @@
 		"title": "Flickr Flavored TODO List",
 		"time_string": "September 2014",
 		"description": "Simple TODO list. Fetching local background images from Flickr.com\nDesigned to play around with both geolocation API and Flickr API",
-		"img": "images/flickr-todo.png",
+		"img": "timeline/images/flickr-todo.png",
 		"url": "http://jstougaard.github.io/flickr-todo",
 		"type": "project",
 		"tags": ["JS", "Geolocation", "Flickr"]
@@ -48,7 +48,7 @@
 		"title": "CSS Animated Movie Archive",
 		"time_string": "September 2014",
 		"description": "Creating interactivity without javascript. Created as an experiment in CSS3 capabilities.",
-		"img": "images/css-animations-site.png",
+		"img": "timeline/images/css-animations-site.png",
 		"url": "http://jstougaard.github.io/css-animations/",
 		"type": "homework",
 		"tags": ["CSS3", "Animations"]
@@ -57,7 +57,7 @@
 		"title": "WALLMOB",
 		"time_string": "2012 - 2014",
 		"description": "Senior web developer at Wallmob A/S\nWorking primarily on backend and rest API",
-		"img": "images/wallmob-pos.png",
+		"img": "timeline/images/wallmob-pos.png",
 		"url": "https://www.wallmob.com",
 		"type": "work",
 		"tags": ["PHP", "MySQL", "YII", "REST"]
@@ -75,7 +75,7 @@
 		"title": "FriGuidr",
 		"time_string": "December 2013",
 		"description": "Android app to guide people to the best Friday Bar - considering distance as well as user interests. Example of machine learning use case.",
-		"img": "images/friguidr.png",
+		"img": "timeline/images/friguidr.png",
 		"url": "http://friguidr.parseapp.com/",
 		"type": "homework",
 		"tags": ["Android", "Parse.com", "Geolocation"]
@@ -84,7 +84,7 @@
 		"title": "Klotski Game",
 		"time_string": "November 2013",
 		"description": "Simple Klotski game. Made to be configurable using simple markup rules. Part of Client Based Web Programming class",
-		"img": "images/klotski.png",
+		"img": "timeline/images/klotski.png",
 		"url": "http://jstougaard.github.io/klotski/",
 		"type": "homework",
 		"tags": ["vanillaJS"]
@@ -102,7 +102,7 @@
 		"title": "Drag and drop experiment",
 		"time_string": "November 2013",
 		"description": "Experimenting with drag and drop in jQuery. Part of Client Based Web Programming class",
-		"img": "images/drag-drop.png",
+		"img": "timeline/images/drag-drop.png",
 		"url": "http://jstougaard.github.io/drag-drop/",
 		"type": "homework",
 		"tags": ["Drag-and-drop", "jQuery"]
@@ -111,7 +111,7 @@
 		"title": "Writing Spy Logger",
 		"time_string": "November 2013",
 		"description": "Logging all input in a textfield - including changes and deletions. Outputting log as part of experiment. Part of Client Based Web Programming class",
-		"img": "images/writing-spy.png",
+		"img": "timeline/images/writing-spy.png",
 		"url": "http://jstougaard.github.io/writing-spy/",
 		"type": "homework",
 		"tags": ["JS"]
@@ -129,7 +129,7 @@
 		"title": "The missing light",
 		"time_string": "October 2013",
 		"description": "Study of Shape Changing interfaces through lighting.",
-		"img": "images/missing-light.png",
+		"img": "timeline/images/missing-light.png",
 		"url": "http://youtu.be/lNT-QMRCDIE",
 		"type": "homework",
 		"tags": ["Arduino", "UX", "Interaction Design"]
@@ -138,7 +138,7 @@
 		"title": "MSc IT Product Development, Aarhus University",
 		"time_string": "2013 - 2015",
 		"description": "The master’s degree is a direct extension of the bachelor described below. Especially focused on the three vertices; advanced web technologies, interaction design for pervasive computing, and physical and spatial design.",
-		"img": "images/au-logo.jpg",
+		"img": "timeline/images/au-logo.jpg",
 		"url": "http://kandidat.au.dk/en/it-product-development/",
 		"type": "education",
 		"tags": ["Interaction Design", "Prototyping", "UX", "CS"]
@@ -147,7 +147,7 @@
 		"title": "Lundorf.com",
 		"time_string": "2013",
 		"description": "Web Developer. Implementing theme and custom modules. Setting up Amazon integration",
-		"img": "images/lundorf.png",
+		"img": "timeline/images/lundorf.png",
 		"url": "http://www.lundorf.com",
 		"type": "work",
 		"tags": ["PHP", "MySQL", "Prestashop"]
@@ -156,7 +156,7 @@
 		"title": "Online Work Schedule",
 		"time_string": "May 2013",
 		"description": "Planning tool for emplyees and managers in fitness centers. Created in collaboration with <a href='http://sport-solution.com/'>Sport-Solution</a> and <a href='http://www.seierfitness.dk/'>Seierfitness</a>\nLogin using admin:admin",
-		"img": "images/vagtplan.png",
+		"img": "timeline/images/vagtplan.png",
 		"url": "http://vagtplan.herokuapp.com",
 		"type": "homework",
 		"tags": ["Backbone", "Marionette", "Parse.com"]
@@ -165,7 +165,7 @@
 		"title": "Spotnight",
 		"time_string": "December 2012",
 		"description": "Bachelor project. Interactive table used as ambient display. \n\"How can ambient lighting alleviate first encounters within a social realm of interaction in a typical nightclub setting?\"",
-		"img": "images/spotnight.jpg",
+		"img": "timeline/images/spotnight.jpg",
 		"url": "http://youtu.be/Zp2_cRWrpL0",
 		"type": "education",
 		"tags": ["Arduino", "UX", "Interaction Design"]
@@ -174,7 +174,7 @@
 		"title": "QuickD",
 		"time_string": "Spring 2012",
 		"description": "Web-app based instant deals. Developed single page web application for back office and mobile web app for customers.",
-		"img": "images/quickd.png",
+		"img": "timeline/images/quickd.png",
 		"url": "",
 		"type": "project",
 		"tags": ["Backbone", "SASS", "CouchDB", "PHP"]
@@ -183,7 +183,7 @@
 		"title": "Winedeal.dk",
 		"time_string": "Spring 2012",
 		"description": "Groupon-style deal site focused on quality wines. Ran for about a year, but never gained traction.",
-		"img": "images/winedeal.png",
+		"img": "timeline/images/winedeal.png",
 		"url": "http://winedeal.dk/",
 		"type": "project",
 		"tags": ["PHP", "MySQL"]
@@ -192,7 +192,7 @@
 		"title": "Dealsbynight.dk",
 		"time_string": "Spring 2012",
 		"description": "Groupon-style deal site focused on nightlife offers. Never put in production due to a lack of collaborators.",
-		"img": "images/dealsbynight.png",
+		"img": "timeline/images/dealsbynight.png",
 		"url": "http://www.dealsbynight.dk/",
 		"type": "project",
 		"tags": ["PHP", "MySQL"]
@@ -201,7 +201,7 @@
 		"title": "BSc IT Product Development, Aarhus University",
 		"time_string": "2010 - 2013",
 		"description": "The degree program is based in the Department of Computer Science and sits in the intersection between CS, design and business.\nFocused on critical design thinking, practical project work, and prototyping – all alongside a very solid foundation of technical expertise.",
-		"img": "images/au-logo.jpg",
+		"img": "timeline/images/au-logo.jpg",
 		"url": "http://bachelor.au.dk/en/it/",
 		"type": "education",
 		"tags": ["Interaction Design", "Prototyping", "UX", "CS"]
