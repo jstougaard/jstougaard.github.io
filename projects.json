@@ -1,5 +1,23 @@
 [
 	{
+		"time_string": "December 2014",
+		"title": "Travel Scrapbook",
+		"description": "Travel scrapbook concept created for the Information Organization and Retrieval course at Berkeley. Using Polymer for web components.",
+		"img": "timeline/images/scrapbook.png",
+		"url": "http://jstougaard.github.io/scrapbook",
+		"type": "project",
+		"tags": ["Polymer"]
+	},
+	{
+		"time_string": "December 2014",
+		"title": "Course Explorer",
+		"description": "Course catalog of all available courses from Khan Academy, Coursera and Udemy. Built to gain familiarity with the MEAN stack. Part of a study project at UC Berkeley",
+		"img": "timeline/images/courses.png",
+		"url": "http://io-db.herokuapp.com",
+		"type": "education",
+		"tags": ["MongoDB", "Express", "AngularJS", "Node.js", "Heroku", "Grunt", "CoffeeScript", "SASS", "Bower"]
+	},
+	{
 		"time_string": "November 2014",
 		"title": "Porfolio Timeline",
 		"description": "Overview of varius former projects. Most of them small and as part of homework assignments.\n Timeline created to gain familiarity with angular, coffeescript, grunt and bower",
