@@ -1,5 +1,14 @@
 [
-	{
+    {
+      "time_string": "September 2015",
+      "title": "Rhythm Builder",
+      "description": "Build and play a rhythm of 1/16th notes. Select BPM and pitch. Made as an experiment with midi playback and time-keeping in the browser.",
+      "img": "timeline/images/rhythm.jpg",
+      "url": "http://jstougaard.github.io/rhythm",
+      "type": "project",
+      "tags": ["Javascript", "MIDI", "Canvas"]
+    },
+    {
 		"time_string": "December 2014",
 		"title": "Travel Scrapbook",
 		"description": "Travel scrapbook concept created for the Information Organization and Retrieval course at Berkeley. Using Polymer for web components.",
